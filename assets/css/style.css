@@ -626,3 +626,117 @@ body {
 }
 }
 
+/* Style pour la section Trust */
+.trust {
+    padding: 120px 0;
+    background-color: var(--bg-secondary);
+}
+
+.trust-container {
+    position: relative;
+}
+
+.trust-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+    max-height: 350px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.trust-logos.expanded {
+    max-height: 2000px;
+}
+
+.trust-logo-item {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--bg-primary);
+    padding: 20px;
+    border: 1px solid var(--border);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.trust-logo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.trust-logo-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.trust-logo-name {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px;
+    transition: bottom 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.trust-logo-item:hover .trust-logo-name {
+    bottom: 0;
+}
+
+.trust-expand {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.expand-button {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+}
+
+.expand-button:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.expand-button i {
+    margin-left: 8px;
+    transition: transform 0.3s;
+}
+
+.expand-button.expanded i {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .trust-logos {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 20px;
+    }
+
+    .trust-logo-image {
+        width: 60px;
+        height: 60px;
+    }
+}
