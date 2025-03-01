@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const shuffledPartners = shuffleArray([...partners]);
             
             const trustLogosContainer = document.getElementById('trust-logos');
+            const trustDescription = document.getElementById('trust-description');
             
             shuffledPartners.forEach((partner, index) => {
                 const logoItem = document.createElement('div');
@@ -109,11 +110,25 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="trust-logo-name">${partner.name}</div>
                 `;
                 
+                logoItem.addEventListener('mouseenter', () => {
+                    trustDescription.innerHTML = `
+                        <div class="trust-description-name">${partner.name}</div>
+                        <div class="trust-description-text">
+                            ${partner.description ? partner.description : '<span class="trust-description-empty">No description available</span>'}
+                        </div>
+                    `;
+                    trustDescription.classList.add('visible');
+                });
+                
                 logoItem.addEventListener('click', () => {
                     window.open(partner.url, '_blank');
                 });
                 
                 trustLogosContainer.appendChild(logoItem);
+            });
+            
+            document.querySelector('.trust-container').addEventListener('mouseleave', () => {
+                trustDescription.classList.remove('visible');
             });
             
             const expandButton = document.getElementById('expand-trust');

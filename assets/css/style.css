@@ -728,6 +728,47 @@ body {
     transform: rotate(180deg);
 }
 
+.trust-description {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.trust-description.visible {
+    height: 100px;
+    opacity: 1;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.trust-description-text {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+}
+
+.trust-description-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.trust-description-empty {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
 @media (max-width: 768px) {
     .trust-logos {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
