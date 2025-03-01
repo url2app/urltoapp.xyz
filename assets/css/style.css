@@ -675,6 +675,7 @@ body {
     height: 80px;
     object-fit: contain;
     margin-bottom: 10px;
+    border-radius: 20px;
 }
 
 .trust-logo-name {
