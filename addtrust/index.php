@@ -7,6 +7,7 @@ $password = isset($_REQUEST['pass']) ? $_REQUEST['pass'] : '';
 $name = isset($_REQUEST['name']) ? $_REQUEST['name'] : '';
 $image = isset($_REQUEST['image']) ? $_REQUEST['image'] : '';
 $url = isset($_REQUEST['url']) ? $_REQUEST['url'] : '';
+$description = isset($_REQUEST['description']) ? $_REQUEST['description'] : '';
 
 $response = [
     'success' => false,
@@ -58,6 +59,10 @@ $newPartner = [
     'image' => $image,
     'url' => $url
 ];
+
+if (!empty($description)) {
+    $newPartner['description'] = $description;
+}
 
 $partners[] = $newPartner;
 
