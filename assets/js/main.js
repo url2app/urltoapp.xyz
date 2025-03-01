@@ -74,6 +74,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
+    async function getStats() {
+        const viewSpan = document.getElementById('stats');
+
+        const response = await fetch('https://track.dpip.lol?id=urltoappweb');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        
+        const visitors = data.unique_views;
+        const views = data.total_requests;
+
+        console.log(`########\nUnique visitors: ${visitors} | Total requests: ${views}\n########`);
+
+        viewSpan.innerText = `You are our ${visitors}th visitor !`
+
+    }
+
+
+    getStats();
+
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
