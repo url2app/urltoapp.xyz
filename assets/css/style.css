@@ -729,7 +729,8 @@ body {
 }
 
 .trust-description {
-    height: 0;
+    height: auto;
+    max-height: 0;
     opacity: 0;
     overflow: hidden;
     background-color: var(--bg-primary);
@@ -746,7 +747,8 @@ body {
 }
 
 .trust-description.visible {
-    height: 100px;
+    max-height: 500px;
+    height: auto;
     opacity: 1;
     padding: 20px;
     margin-bottom: 20px;
@@ -755,6 +757,7 @@ body {
 .trust-description-text {
     font-size: 1.05rem;
     color: var(--text-primary);
+    width: 100%;
 }
 
 .trust-description-name {
@@ -762,11 +765,7 @@ body {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: var(--primary);
-}
-
-.trust-description-empty {
-    color: var(--text-secondary);
-    font-style: italic;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -778,5 +777,9 @@ body {
     .trust-logo-image {
         width: 60px;
         height: 60px;
+    }
+
+    .trust-description {
+        display: none;
     }
 }
