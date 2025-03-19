@@ -185,4 +185,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     loadTrustPartners();
+
+    document.querySelector('.demo-result-iframe').addEventListener('load', function() {
+        this.classList.add('loaded');
+    });
+    
 });

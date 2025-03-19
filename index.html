@@ -62,7 +62,12 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Transform any website into a desktop app</h1>
-                <p>U2A is a command-line tool that lets you turn any URL into a standalone desktop application with a single command. Compatible with Windows, macOS, and Linux.</p>
+                <p>U2A is a command-line tool that lets you turn any URL into a standalone desktop application with a single command.</p>
+                <div class="platform-badges">
+                    <span class="platform-badge"><i class="ri-window-line"></i> Windows</span>
+                    <span class="platform-badge"><i class="ri-apple-fill"></i> macOS</span>
+                    <span class="platform-badge"><i class="ri-ubuntu-fill"></i> Linux</span>
+                </div>
                 <a href="#demo" class="cta-button"><i class="ri-play-circle-line ri-lg"></i> See it in action</a>
             </div>
             <div class="hero-image-container">
@@ -162,37 +167,54 @@
         <div class="container">
             <div class="section-title">
                 <h2>See U2A in Action</h2>
-                <p>Discover how easy it is to transform your favorite websites into desktop applications.</p>
+                <p>Watch as your favorite website transforms into a desktop application</p>
             </div>
-            <div class="demo-window">
-                <div class="demo-bar">
-                    <div class="demo-buttons">
-                        <div class="demo-button demo-close"></div>
-                        <div class="demo-button demo-minimize"></div>
-                        <div class="demo-button demo-maximize"></div>
+            
+            <div class="demo-animation">
+                <div class="demo-terminal-window">
+                    <div class="demo-bar">
+                        <div class="demo-buttons">
+                            <div class="demo-button demo-close"></div>
+                            <div class="demo-button demo-minimize"></div>
+                            <div class="demo-button demo-maximize"></div>
+                        </div>
+                        <div class="demo-title"><i class="ri-terminal-line"></i> Terminal</div>
                     </div>
-                    <div class="demo-title"><i class="ri-terminal-line"></i> Terminal</div>
-                </div>
-                <div class="demo-content">
-                    <div class="demo-terminal">
-                        <p>$ npm install -g u2a</p>
-                        <p>+ u2a@2.1.0</p>
-                        <p>added 147 packages in 5.2s</p>
+                    <div class="demo-terminal-content">
                         <p>$ u2a create urltoapp.xyz</p>
-                        <p>[15:42:30] - INFO | Creating application for urltoapp.xyz</p>
-                        <p>[15:42:31] - INFO | Getting the icon path for https://urltoapp.xyz</p>
-                        <p>[15:42:32] - SUCCESS | Site icon downloaded and saved for https://urltoapp.xyz</p>
-                        <p>[15:42:33] - INFO | Installing dependencies for urltoapp.xyz</p>
-                        <p>[15:42:45] - SUCCESS | Application successfully created for https://urltoapp.xyz</p>
-                        <p>[15:42:45] - INFO | A shortcut has been created in your system's applications directory</p>
-                        <p>$</p>
+                        <p>[INFO] Creating application for urltoapp.xyz</p>
+                        <p>[INFO] Getting the icon path for https://urltoapp.xyz</p>
+                        <p>[SUCCESS] Site icon downloaded and saved</p>
+                        <p>[INFO] Installing dependencies for urltoapp.xyz</p>
+                        <p>[SUCCESS] Application successfully created</p>
+                        <p>[INFO] A shortcut has been created in your applications directory</p>
+                        <p>$<span class="terminal-cursor">|</span></p>
                     </div>
-                    <i class="ri-arrow-down-line"></i>
-                    <img src="assets/img/result.png" alt="U2A Application Result" class="demo-image">
                 </div>
+                
+                <div class="demo-arrow">
+                    <i class="demo-arrow ri-arrow-right-line"></i>
+                </div>
+                
+                <div class="demo-app-window">
+                    <div class="demo-bar">
+                        <div class="demo-buttons">
+                            <div class="demo-button demo-close"></div>
+                            <div class="demo-button demo-minimize"></div>
+                            <div class="demo-button demo-maximize"></div>
+                        </div>
+                        <div class="demo-title">
+                            <img src="assets/img/logo.png" class="demo-favicon"> U2A - Url To App
+                        </div>
+                    </div>
+                    <div class="demo-browser-content">
+                        <iframe src="https://urltoapp.xyz" class="demo-result-iframe" title="U2A Application Result"></iframe>
+                    </div>
+                </div>                
             </div>
         </div>
     </section>
+
 
     <section class="trust" id="trust">
         <div class="container">
@@ -217,12 +239,31 @@
 
     <section class="cta">
         <div class="container">
-            <h2>Ready to try U2A?</h2>
-            <p>Transform your favorite websites into desktop apps today!</p>
-            <div class="cta-buttons">
-                <a href="https://livecreator.urltoapp.xyz" class="cta-button"><i class="ri-flask-line ri-lg"></i> LiveCreator</a>
-                <a href="https://npmjs.com/package/u2a" class="secondary-button"><i class="ri-npmjs-fill ri-lg"></i> Download on NPMJS</a>
-                <a href="https://docs.urltoapp.xyz" class="cta-button"><i class="ri-book-open-line ri-lg"></i> Documentation</a>
+            <div class="cta-content">
+                <h2>Ready to try U2A?</h2>
+                <p>Transform your favorite websites into desktop apps today!</p>
+                <div class="cta-buttons">
+                    <a href="https://livecreator.urltoapp.xyz" class="cta-button glow-button"><i class="ri-flask-line ri-lg"></i> LiveCreator</a>
+                    <a href="https://npmjs.com/package/u2a" class="secondary-button"><i class="ri-npmjs-fill ri-lg"></i> Download on NPMJS</a>
+                    <a href="https://docs.urltoapp.xyz" class="cta-button"><i class="ri-book-open-line ri-lg"></i> Documentation</a>
+                </div>
+            </div>
+            <div class="cta-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-button close"></span>
+                        <span class="terminal-button minimize"></span>
+                        <span class="terminal-button maximize"></span>
+                    </div>
+                    <div class="terminal-title">
+                        <i class="ri-terminal-line"></i> Try it now
+                    </div>
+                </div>
+                <div class="terminal-content">
+                    <p>$ npm install -g u2a</p>
+                    <p>$ u2a create myapp.com</p>
+                    <p class="cursor-line">$<span class="terminal-cursor">|</span></p>
+                </div>
             </div>
         </div>
     </section>
@@ -256,7 +297,7 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2025 U2A (URL to App). Created by <a href="https://douxx.tech">Douxx</a>. All rights reserved.
+                &copy; 2025 U2A (URL to App). All rights reserved.
             </div>
         </div>
     </footer>
