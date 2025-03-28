@@ -912,14 +912,14 @@ footer {
     margin-bottom: 12px;
 }
 
-.footer-links a {
+.footer-links a, .footer-links span {
     color: var(--gray);
     text-decoration: none;
     transition: color 0.2s;
     font-size: 0.95rem;
 }
 
-.footer-links a:hover {
+.footer-links a:hover, .footer-links span:hover {
     color: white;
 }
 
