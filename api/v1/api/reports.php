@@ -95,12 +95,12 @@ try {
                 'color' => $isNewInstall ? 5025616 : 7506394,
                 'fields' => [
                     [
-                        'name' => 'Ancienne Version',
+                        'name' => 'Old Version',
                         'value' => $previousVersion,
                         'inline' => true
                     ],
                     [
-                        'name' => 'Nouvelle Version',
+                        'name' => 'New Version',
                         'value' => $newVersion,
                         'inline' => true
                     ],
